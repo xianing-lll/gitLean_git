@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  kuangapp:
+    build: .
+    image: kuangapp
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+  redis:
+    image: "library/redis:alpine"
